@@ -60,4 +60,9 @@ Rails.application.routes.draw do
   #     # (app/controllers/admin/products_controller.rb)
   #     resources :products
   #   end
+  Spree::Core::Engine.routes.draw do
+    namespace :admin do
+      resource  :theme_settings
+    end
+  end
 end
